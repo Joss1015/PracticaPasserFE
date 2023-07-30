@@ -21,5 +21,5 @@ export class PageBaseComponent {
     }
   ];
   
-  currentTab: string="nn"
+  currentTab: string=""
 }

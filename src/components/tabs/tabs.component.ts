@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -13,6 +14,10 @@ export class TabsComponent implements OnInit, OnChanges {
 
   currentTab = '';
 
+  constructor(private router:Router){
+
+  }
+
   ngOnInit(): void {
     this.currentTab = this.list[0].action;
     console.log("data:",this.list)
@@ -25,9 +30,10 @@ export class TabsComponent implements OnInit, OnChanges {
   }
 
   changeLink(action: string): void{
-    if(action !== this.currentTab){
+    this.router.navigate([action]);
+   /* if(action !== this.currentTab){
       this.currentTab = action;
       this.onChangeLink.emit({action, component: this});
-    }
+    }*/
   }
 }
