@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
 import { TabsComponent } from './tabs.component';
+import { IonicModule } from '@ionic/angular';
 
 describe('TabsComponent', () => {
   let component: TabsComponent;

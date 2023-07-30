@@ -15,6 +15,7 @@ export class TabsComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.currentTab = this.list[0].action;
+    console.log("data:",this.list)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
