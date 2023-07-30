@@ -11,6 +11,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { PageBaseComponent } from 'src/pages/page-base/page-base.component';
 import { TabsComponent } from 'src/components/tabs/tabs.component';
+import { BoxWhiteComponent } from 'src/components/box-white/box-white.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader { return new TranslateHttpLoader(http, './assets/i18n/', '.json'); }
 
@@ -18,7 +19,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader { retur
   declarations: [
     AppComponent,
     PageBaseComponent,
-    TabsComponent
+    TabsComponent,
+    BoxWhiteComponent
   ],
   imports: [
     BrowserModule,
